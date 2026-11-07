@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://l63301k3cgnc"]
+
+[ext_resource type="Texture2D" uid="uid://djepcm5sh6yxk" path="res://assets/programmer art/temp_platform.png" id="1_1k4gi"]
+[ext_resource type="PackedScene" uid="uid://qxyuvv4jesyq" path="res://src/player/player.tscn" id="2_6fy3g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fy3g"]
+texture = ExtResource("1_1k4gi")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.007427, -5.5756197, 15.827568, -5.755479, 15.827568, 5.5756207, -16.007427, 5.5756207)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sr1k1"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6fy3g")
+
+[node name="World" type="Node2D" unique_id=1106314825]
+position = Vector2(97, 630)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1141115560]
+tile_set = SubResource("TileSet_sr1k1")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(1, 0, 0, 65535, 0, 0, 65533, 0, 0, 65531, 0, 0, 3, 0, 0, 5, 0, 0)
+
+[node name="Player" parent="." unique_id=811524443 instance=ExtResource("2_6fy3g")]
+position = Vector2(12, -34)
