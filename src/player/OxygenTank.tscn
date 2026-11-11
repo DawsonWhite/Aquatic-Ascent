@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dlu3np51ssqdm"]
+
+[ext_resource type="Texture2D" uid="uid://bpaacmeik7fmq" path="res://assets/programmer art/Oxygen.png" id="1_ctfcs"]
+[ext_resource type="Script" uid="uid://dng06p63vqn1u" path="res://src/player/oxygen_tank.gd" id="2_3rtxy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rtxy"]
+size = Vector2(16, 19)
+
+[node name="OxygenTank" type="Sprite2D" unique_id=1737238485]
+position = Vector2(0, -16)
+texture = ExtResource("1_ctfcs")
+script = ExtResource("2_3rtxy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=545162249]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1782610882]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_3rtxy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
