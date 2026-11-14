@@ -34,7 +34,7 @@ func show_next_tank(tank_position: Vector2) -> void:
 	await tween.finished
 
 	# Wait for player to see the next tank
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 
 	# Return camera to player
 	var return_tween = create_tween()
