@@ -1,5 +1,12 @@
 extends Sprite2D
 
+@export var next_tank: Node2D
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		body.update_o2_time(5)
+		body.update_o2_time(60)
+	
+	var camera = get_tree().get_first_node_in_group("Camera")
+	
+	if camera and next_tank:
+		camera.show_next_tank(next_tank.global_position)

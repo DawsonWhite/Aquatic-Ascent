@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://qxyuvv4jesyq" path="res://src/player/player.tscn" id="2_6fy3g"]
 [ext_resource type="Texture2D" uid="uid://cdr6au7vsm0ku" path="res://assets/programmer art/Platform 2.png" id="2_bsf3i"]
 [ext_resource type="PackedScene" uid="uid://dlu3np51ssqdm" path="res://src/player/OxygenTank.tscn" id="3_jte2u"]
+[ext_resource type="Script" uid="uid://ctc58almfrwci" path="res://src/world/camera_2d.gd" id="4_bsf3i"]
+[ext_resource type="Texture2D" uid="uid://cdr6au7vsm0ku" path="res://assets/programmer art/Platform 2.png" id="2_bsf3i"]
+[ext_resource type="PackedScene" uid="uid://dlu3np51ssqdm" path="res://src/player/OxygenTank.tscn" id="3_jte2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43c6p"]
 texture = ExtResource("2_bsf3i")
@@ -27,7 +30,4 @@ tile_map_data = PackedByteArray("AAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD7/wAAAAABAAA
 tile_set = SubResource("TileSet_utsmv")
 
 [node name="Player" parent="." unique_id=811524443 instance=ExtResource("2_6fy3g")]
-position = Vector2(13, -20)
-
-[node name="OxygenTank" parent="." unique_id=1737238485 instance=ExtResource("3_jte2u")]
-position = Vector2(135, -19)
+position = Vector2(12, -34)
