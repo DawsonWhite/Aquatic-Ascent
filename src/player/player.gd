@@ -10,8 +10,13 @@ const FALL_GRAVITY = 500
 @onready var o2_timer = $OutOfO2
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+var checkpoint_position: Vector2
+var checkpoint_o2: float
+
 func _ready() -> void:
 	add_to_group("Player")
+	checkpoint_position = global_position
+	checkpoint_o2 = o2_timer.time_left
 
 func update_o2_time(new_seconds: float) -> void:
 	if((o2_timer.time_left + new_seconds) > 60):
@@ -42,6 +47,17 @@ func _physics_process(delta: float) -> void:
 
 	update_animations(direction)
 
+func activate_checkpoint() -> void:
+	checkpoint_position = global_position
+	checkpoint_o2 = o2_timer.time_left
+
+func respawn() -> void:
+	global_position = checkpoint_position
+	velocity = Vector2.ZERO
+
+	o2_timer.start(checkpoint_o2)
+
+
 func update_animations(direction: float) -> void:
 	# 1. Flip the sprite based on movement direction
 	if direction > 0:
@@ -57,6 +73,5 @@ func update_animations(direction: float) -> void:
 			animated_sprite.play("Idle")
 
 func _on_out_of_o_2_timeout() -> void:
-	queue_free()
+	respawn()
 	#move this to a die function
-
