@@ -12,8 +12,8 @@ func _ready() -> void:
 	add_to_group("Player")
 
 func update_o2_time(new_seconds: float) -> void:
-	if((o2_timer.time_left + new_seconds) > 60):
-		o2_timer.start(60)
+	if((o2_timer.time_left + new_seconds) > 90):
+		o2_timer.start(90)
 	else:
 		o2_timer.start(o2_timer.time_left + new_seconds)
 	print(o2_timer.wait_time)
@@ -34,6 +34,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+<<<<<<< Updated upstream
+=======
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var hit = collision.get_collider()
+		if hit is breakingPlatform:
+			hit.destroy()
+>>>>>>> Stashed changes
 	
 
 
