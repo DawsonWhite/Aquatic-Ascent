@@ -5,15 +5,7 @@ var unlocked
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-<<<<<<< Updated upstream
 
-		if unlocked:
-			return
-		body.update_o2_time(10)
-
-=======
-		body.update_o2_time(5)
->>>>>>> Stashed changes
 		if unlocked:
 			return
 		body.update_o2_time(90)
@@ -25,7 +17,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if camera and next_tank:
 		camera.show_next_tank(next_tank.global_position)
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
