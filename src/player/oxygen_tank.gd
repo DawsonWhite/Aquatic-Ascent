@@ -5,9 +5,15 @@ var unlocked
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+
 		if unlocked:
 			return
 		body.update_o2_time(10)
+
+		if unlocked:
+			return
+		body.update_o2_time(90)
+
 		unlocked = true
 	body.activate_checkpoint()
 	
@@ -15,3 +21,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	if camera and next_tank:
 		camera.show_next_tank(next_tank.global_position)
+

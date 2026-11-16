@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cva37203ixj1s"]
+
+[ext_resource type="Script" uid="uid://bwwldeorinvwv" path="res://src/world/breaking_platform.gd" id="1_lclrl"]
+[ext_resource type="Texture2D" uid="uid://cp7qgh1txpnb7" path="res://assets/programmer art/breakable platform.png" id="2_vth5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utsmv"]
+size = Vector2(96, 32)
+
+[node name="BreakingPlatform" type="StaticBody2D" unique_id=1489395164]
+script = ExtResource("1_lclrl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1118646172]
+position = Vector2(36, -103)
+texture = ExtResource("2_vth5c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=437996206]
+position = Vector2(68, -103)
+texture = ExtResource("2_vth5c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=430821884]
+position = Vector2(100, -103)
+texture = ExtResource("2_vth5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111850240]
+position = Vector2(68, -103)
+shape = SubResource("RectangleShape2D_utsmv")
+
+[node name="Break" type="Timer" parent="." unique_id=1124364321]
+wait_time = 0.5
+
+[node name="Reappear" type="Timer" parent="." unique_id=1217830384]
+wait_time = 2.0
+
+[connection signal="timeout" from="Break" to="." method="_on_delay_fall_timeout"]
+[connection signal="timeout" from="Reappear" to="." method="_on_reappear_timeout"]
