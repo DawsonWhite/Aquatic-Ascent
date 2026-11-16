@@ -29,12 +29,6 @@ tile_map_data = PackedByteArray("AAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD7/wAAAAABAAA
 tile_set = SubResource("TileSet_utsmv")
 
 [node name="Player" parent="." unique_id=811524443 instance=ExtResource("2_6fy3g")]
-<<<<<<< Updated upstream
-position = Vector2(13, -20)
-
-[node name="OxygenTank" parent="." unique_id=1737238485 instance=ExtResource("3_jte2u")]
-position = Vector2(135, -19)
-=======
 position = Vector2(209, -19)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=602521423 node_paths=PackedStringArray("player_node")]
@@ -114,4 +108,3 @@ position = Vector2(643, -4373)
 
 [node name="L3End" parent="CheckPoints" unique_id=1498873315 instance=ExtResource("3_jte2u")]
 position = Vector2(470, -5027)
->>>>>>> Stashed changes

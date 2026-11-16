@@ -47,7 +47,10 @@ func _physics_process(delta: float) -> void:
 		var hit = collision.get_collider()
 		if hit is breakingPlatform:
 			hit.destroy()
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 	
 
 	update_animations(direction)
