@@ -46,6 +46,7 @@ size = Vector2(18, 38)
 
 [node name="Player" type="CharacterBody2D" unique_id=2095875228]
 position = Vector2(0, -16)
+collision_layer = 2
 script = ExtResource("1_4anbu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1138639586]
@@ -53,7 +54,6 @@ position = Vector2(0, -3)
 scale = Vector2(1.25, 1.21875)
 sprite_frames = SubResource("SpriteFrames_kfj7b")
 animation = &"Moving"
-frame_progress = 0.12751497
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1529481030]
 position = Vector2(0, -3)

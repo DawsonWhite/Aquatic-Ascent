@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dkf84s80q8wn6"]
+
+[ext_resource type="Script" uid="uid://en0r2bjusc7q" path="res://src/objects/hazards/fih.gd" id="1_1m4kj"]
+[ext_resource type="Texture2D" uid="uid://655c40s7r0oh" path="res://assets/programmer art/Fih.png" id="1_fuicf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m4kj"]
+size = Vector2(9.999994, 22.575125)
+
+[node name="Fih" type="CharacterBody2D" unique_id=1724412506]
+script = ExtResource("1_1m4kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1121007477]
+position = Vector2(0, -16)
+texture = ExtResource("1_fuicf")
+
+[node name="Shape" type="CollisionShape2D" parent="." unique_id=270272600]
+position = Vector2(1.137145, -16.5)
+scale = Vector2(2.3725727, 0.8416343)
+shape = SubResource("RectangleShape2D_1m4kj")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1716049586]
+collision_mask = 2
+
+[node name="collisionshape2d" type="CollisionShape2D" parent="Hitbox" unique_id=1807024264]
+position = Vector2(1.137145, -16.5)
+scale = Vector2(2.3725727, 0.8416343)
+shape = SubResource("RectangleShape2D_1m4kj")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1977674240]
+position = Vector2(-13, -24)
+target_position = Vector2(0, 30)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
