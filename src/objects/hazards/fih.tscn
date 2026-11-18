@@ -19,6 +19,7 @@ scale = Vector2(2.3725727, 0.8416343)
 shape = SubResource("RectangleShape2D_1m4kj")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1716049586]
+collision_mask = 2
 
 [node name="collisionshape2d" type="CollisionShape2D" parent="Hitbox" unique_id=1807024264]
 position = Vector2(1.137145, -16.5)
@@ -28,3 +29,5 @@ shape = SubResource("RectangleShape2D_1m4kj")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1977674240]
 position = Vector2(-13, -24)
 target_position = Vector2(0, 30)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

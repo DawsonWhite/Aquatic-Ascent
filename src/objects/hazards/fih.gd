@@ -1,6 +1,6 @@
 extends CharacterBody2D
-
-var SPEED = 100
+class_name fih
+var SPEED = 50
 const GRAVITY = 20
 
 var direction = -1
@@ -22,9 +22,13 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		direction *= -1
 		flip()
-func _on_hitbox_body_entered(body: Node2D) -> void:
+func _on_hitbox_body_entered(body) -> void:
 	if body.is_in_group("Player"):
-		pass
+		if body.global_position.x < global_position.x:
+			body.knockback =-1500
+		elif body.global_position.x > global_position.x:
+			body.knockback =1500
+	pass
 
 func flip():
 	facing_right = !facing_right
