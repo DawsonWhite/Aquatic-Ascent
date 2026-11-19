@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var oxygen_bar = $OxygenLevel
-@onready var oxygen_num = $OxygenCount
 const MAX_TIME = 20.0
 var time_left = MAX_TIME
 # Called when the node enters the scene tree for the first time.
