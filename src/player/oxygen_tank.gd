@@ -10,13 +10,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		oxygen_bar.time_left=oxygen_bar.MAX_TIME
 		if unlocked:
 			return
-		
-		
-
-
-
 		unlocked = true
-	body.activate_checkpoint()
+		body.activate_checkpoint()
 	var camera = get_tree().get_first_node_in_group("Camera")
 	
 	if camera and next_tank:

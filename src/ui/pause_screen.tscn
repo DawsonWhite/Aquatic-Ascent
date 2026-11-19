@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://drpqa5j4fagen"]
+
+[ext_resource type="Texture2D" uid="uid://c3b3y5eosmmwq" path="res://assets/programmer art/WaterBackground.png" id="1_r2n4j"]
+[ext_resource type="Script" uid="uid://c6cqdtioux6wo" path="res://src/ui/pause_screen.gd" id="1_wvhr6"]
+
+[node name="pause_screen" type="CanvasLayer" unique_id=1958919958]
+process_mode = 3
+script = ExtResource("1_wvhr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1879740991]
+position = Vector2(576.99994, 324.5)
+scale = Vector2(1.897858, 0.68617016)
+texture = ExtResource("1_r2n4j")
+flip_v = true
+
+[node name="resume" type="Button" parent="." unique_id=998672161]
+offset_left = 383.0
+offset_top = 218.0
+offset_right = 770.0
+offset_bottom = 309.0
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+
+[node name="restart" type="Button" parent="." unique_id=911008887]
+offset_left = 383.0
+offset_top = 337.0
+offset_right = 769.0
+offset_bottom = 428.0
+theme_override_font_sizes/font_size = 60
+text = "Restart"
+
+[node name="quit" type="Button" parent="." unique_id=1369148216]
+offset_left = 382.0
+offset_top = 447.0
+offset_right = 770.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=273734896]
+offset_left = 401.0
+offset_top = 55.0
+offset_right = 753.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 100
+text = "Paused"
+
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

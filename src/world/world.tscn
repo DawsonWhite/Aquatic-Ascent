@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dkf84s80q8wn6" path="res://src/objects/hazards/fih.tscn" id="6_l0av5"]
 [ext_resource type="Script" uid="uid://c4lqcxbglhs0y" path="res://src/world/ui.gd" id="7_5kmgb"]
 [ext_resource type="AudioStream" uid="uid://bwievnk1lry6" path="res://assets/audio/Underwater_Audio.wav" id="10_jsigt"]
+[ext_resource type="PackedScene" uid="uid://drpqa5j4fagen" path="res://src/ui/pause_screen.tscn" id="11_jsigt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43c6p"]
 texture = ExtResource("2_bsf3i")
@@ -144,5 +145,8 @@ script = ExtResource("7_5kmgb")
 offset_right = 103.0
 offset_bottom = 27.0
 max_value = 30.0
+
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="." unique_id=1184952911]
 stream = ExtResource("10_jsigt")
+
+[node name="pause_screen" parent="." unique_id=1958919958 instance=ExtResource("11_jsigt")]
