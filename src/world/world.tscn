@@ -5,13 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dlu3np51ssqdm" path="res://src/player/OxygenTank.tscn" id="3_jte2u"]
 [ext_resource type="Script" uid="uid://ctc58almfrwci" path="res://src/world/camera_2d.gd" id="4_bsf3i"]
 [ext_resource type="PackedScene" uid="uid://cva37203ixj1s" path="res://src/objects/platforms/breaking/breaking_platform.tscn" id="5_43c6p"]
-
 [ext_resource type="PackedScene" uid="uid://dkf84s80q8wn6" path="res://src/objects/hazards/fih.tscn" id="6_l0av5"]
 [ext_resource type="Script" uid="uid://c4lqcxbglhs0y" path="res://src/world/ui.gd" id="7_5kmgb"]
-
-
-[ext_resource type="PackedScene" uid="uid://dkf84s80q8wn6" path="res://src/objects/hazards/fih.tscn" id="6_l0av5"]
- 
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43c6p"]
 texture = ExtResource("2_bsf3i")
@@ -37,12 +32,6 @@ tile_set = SubResource("TileSet_utsmv")
 
 [node name="Player" parent="." unique_id=811524443 instance=ExtResource("2_6fy3g")]
 position = Vector2(13, -20)
-
-[node name="OxygenTank" parent="." unique_id=1737238485 instance=ExtResource("3_jte2u")]
-position = Vector2(135, -19)
-position = Vector2(209, -19)
-position = Vector2(87, -23)
-
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=602521423 node_paths=PackedStringArray("player_node")]
 limit_left = 5
@@ -147,11 +136,5 @@ offset_right = 103.0
 offset_bottom = 27.0
 max_value = 30.0
 
-[node name="OxygenCount" type="Label" parent="Ui" unique_id=661213654]
-offset_right = 40.0
-offset_bottom = 23.0
-
-
-[node name="Fih" parent="." unique_id=1724412506 instance=ExtResource("6_l0av5")]
+[node name="Fih" parent="." unique_id=1093878211 instance=ExtResource("6_l0av5")]
 position = Vector2(556, -121)
-
