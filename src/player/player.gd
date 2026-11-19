@@ -13,15 +13,6 @@ var checkpoint_position: Vector2
 var checkpoint_o2: float
 
 
-const JUMP_VELOCITY = -500.0
-const GRAVITY = 1000
-const FALL_GRAVITY = 500
-
-@onready var o2_timer = $OutOfO2
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
-var checkpoint_position: Vector2
-var checkpoint_o2: float
 
 
 func _ready() -> void:
