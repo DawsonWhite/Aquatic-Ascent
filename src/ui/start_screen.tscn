@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cfvhqlfl3b6s7"]
+
+[ext_resource type="Script" uid="uid://cxg2irydrc7hm" path="res://src/ui/start_screen.gd" id="1_76rai"]
+[ext_resource type="Texture2D" uid="uid://c3b3y5eosmmwq" path="res://assets/programmer art/WaterBackground.png" id="1_cotg3"]
+
+[node name="start_screen" type="CanvasLayer" unique_id=1403293706]
+script = ExtResource("1_76rai")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=75450807]
+position = Vector2(576.75, 322.5)
+scale = Vector2(1.898682, 0.6861702)
+texture = ExtResource("1_cotg3")
+
+[node name="Start" type="Button" parent="." unique_id=1058761659]
+offset_left = 322.0
+offset_top = 282.0
+offset_right = 835.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[node name="Quit" type="Button" parent="." unique_id=726921659]
+offset_left = 320.0
+offset_top = 464.0
+offset_right = 833.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=2045231462]
+offset_left = 194.0
+offset_top = 103.0
+offset_right = 959.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 100
+text = "Aquatic Ascent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
