@@ -26,6 +26,10 @@ func update_o2_time(new_seconds: float) -> void:
 	print(o2_timer.wait_time)
 
 func _physics_process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_P):
+		pass
+		#get_tree().change_scene_to_file("res://src/ui/pause_)
+	
 	if not is_on_floor():
 		if velocity.y < 0:
 			velocity.y += GRAVITY * delta
@@ -67,11 +71,9 @@ func update_animations(direction: float) -> void:
 
 	# 2. Play the right animation
 	if is_on_floor():
+			animated_sprite.play("Idle")
+	else:
 		if direction != 0:
 			animated_sprite.play("Moving")
-		else:
-			animated_sprite.play("Idle")
-
 func _on_out_of_o_2_timeout() -> void:
 	respawn()
-	#move this to a die function

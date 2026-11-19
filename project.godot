@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Aquatic-Ascent"
 run/main_scene="uid://l63301k3cgnc"
+run/main_scene="uid://famaiicfginc"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

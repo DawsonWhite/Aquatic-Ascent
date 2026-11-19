@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dvnfsxq5hfotv"]
+
+[ext_resource type="Script" uid="uid://bauha25yagij1" path="res://src/ui/pause.gd" id="1_wvhr6"]
+[ext_resource type="Texture2D" uid="uid://c3b3y5eosmmwq" path="res://assets/programmer art/WaterBackground.png" id="2_naylq"]
+
+[node name="pause_screen" type="CanvasLayer" unique_id=130342032]
+script = ExtResource("1_wvhr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1293379550]
+position = Vector2(579, 322.5)
+scale = Vector2(1.8945634, 0.6797872)
+texture = ExtResource("2_naylq")
+flip_v = true
+
+[node name="resume_button" type="Button" parent="." unique_id=870527073]
+offset_left = 466.0
+offset_top = 127.0
+offset_right = 691.0
+offset_bottom = 259.0
+text = "Resume"
+
+[node name="quit_button" type="Button" parent="." unique_id=778964888]
+offset_left = 707.0
+offset_top = 320.0
+offset_right = 932.0
+offset_bottom = 452.0
+text = "Quit"
+
+[node name="restart_button" type="Button" parent="." unique_id=1148741354]
+offset_left = 225.0
+offset_top = 321.0
+offset_right = 450.0
+offset_bottom = 453.0
+text = "Restart"
+
+[node name="Label" type="Label" parent="." unique_id=1206105731]
+offset_left = 339.0
+offset_top = 3.0
+offset_right = 820.0
+offset_bottom = 92.0
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="resume_button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://famaiicfginc"]
+
+[ext_resource type="Script" uid="uid://cxg2irydrc7hm" path="res://src/ui/start_screen.gd" id="1_cotg3"]
+[ext_resource type="Texture2D" path="res://assets/programmer art/WaterBackground.png" id="2_76rai"]
+
+[node name="Start Screen" type="CanvasLayer" unique_id=254982111]
+script = ExtResource("1_cotg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662004059]
+position = Vector2(578.25, 326.5)
+scale = Vector2(1.9102142, 0.6925532)
+texture = ExtResource("2_76rai")
+
+[node name="start_button" type="Button" parent="." unique_id=1519441317]
+anchors_preset = -1
+anchor_left = 0.192
+anchor_top = 0.165
+anchor_right = 0.192
+anchor_bottom = 0.165
+offset_left = 163.816
+offset_top = 106.079994
+offset_right = 546.816
+offset_bottom = 236.07999
+text = "Start"
+
+[node name="quit_button" type="Button" parent="." unique_id=217654876]
+offset_left = 385.0
+offset_top = 386.0
+offset_right = 768.0
+offset_bottom = 515.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=404312508]
+offset_left = 383.0
+offset_top = 81.0
+offset_right = 769.0
+offset_bottom = 143.0
+text = "Aquatic Ascent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
