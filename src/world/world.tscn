@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://l63301k3cgnc"]
 
+[ext_resource type="Script" uid="uid://bwwdbs6c72isk" path="res://src/world/world.gd" id="1_ocs7n"]
 [ext_resource type="Texture2D" uid="uid://c3b3y5eosmmwq" path="res://assets/programmer art/WaterBackground.png" id="1_wg6dd"]
 [ext_resource type="PackedScene" uid="uid://qxyuvv4jesyq" path="res://src/player/player.tscn" id="2_6fy3g"]
 [ext_resource type="Texture2D" uid="uid://cdr6au7vsm0ku" path="res://assets/programmer art/Platform 2.png" id="2_bsf3i"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cva37203ixj1s" path="res://src/objects/platforms/breaking/breaking_platform.tscn" id="5_43c6p"]
 [ext_resource type="PackedScene" uid="uid://dkf84s80q8wn6" path="res://src/objects/hazards/fih.tscn" id="6_l0av5"]
 [ext_resource type="Script" uid="uid://c4lqcxbglhs0y" path="res://src/world/ui.gd" id="7_5kmgb"]
+[ext_resource type="AudioStream" uid="uid://bwievnk1lry6" path="res://assets/audio/Underwater_Audio.wav" id="10_jsigt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43c6p"]
 texture = ExtResource("2_bsf3i")
@@ -26,6 +28,7 @@ sources/0 = SubResource("TileSetAtlasSource_43c6p")
 
 [node name="World" type="Node2D" unique_id=1106314825]
 position = Vector2(102, -30)
+script = ExtResource("1_ocs7n")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1374808714]
 position = Vector2(479.75003, -2615.5)
@@ -141,3 +144,5 @@ script = ExtResource("7_5kmgb")
 offset_right = 103.0
 offset_bottom = 27.0
 max_value = 30.0
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="." unique_id=1184952911]
+stream = ExtResource("10_jsigt")
