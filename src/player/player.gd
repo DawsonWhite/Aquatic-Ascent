@@ -75,10 +75,10 @@ func update_animations(direction: float) -> void:
 
 	# 2. Play the right animation
 	if is_on_floor():
-		if direction != 0:
-			animated_sprite.play("Moving")
-		else:
+		if direction == 0:
 			animated_sprite.play("Idle")
+	elif direction != 0:
+		animated_sprite.play("Moving")
 
 func _on_out_of_o_2_timeout() -> void:
 	respawn()
